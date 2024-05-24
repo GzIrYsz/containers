@@ -96,7 +96,7 @@ jobs:
             ${{ steps.meta1.outputs.imgname }}
             ghcr.io/${{ steps.meta1.outputs.imgname }}
           flavor: |
-            suffix=${{ steps.meta1.outputs.base }},onlatest=false
+            suffix=-${{ steps.meta1.outputs.base }},onlatest=false
           tags: |
             type=semver,pattern={{version}},value=v${{ steps.meta1.outputs.version }}
             type=semver,pattern={{major}}.{{minor}},value=v${{ steps.meta1.outputs.version }}
